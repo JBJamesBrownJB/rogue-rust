@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CargoProjects">
+    <cargoProject FILE="$PROJECT_DIR$/Cargo.toml" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="91b16f52-230e-4d08-9e70-2798ad8fc774" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Rust File" />
+      </list>
+    </option>
+  </component>
+  <component name="MacroExpansionManager">
+    <option name="directoryName" value="3kxgpo0o" />
+  </component>
+  <component name="ProjectId" id="1lxrPLu9hSVu1IbOKikprqluWoz" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="org.rust.cargo.project.model.PROJECT_DISCOVERY" value="true" />
+    <property name="settings.editor.selected.configurable" value="language.rust.cargo" />
+  </component>
+  <component name="RustProjectSettings">
+    <option name="runExternalLinterOnTheFly" value="true" />
+    <option name="toolchainHomeDirectory" value="$USER_HOME$/.cargo/bin" />
+    <option name="version" value="2" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="91b16f52-230e-4d08-9e70-2798ad8fc774" name="Default Changelist" comment="" />
+      <created>1608549557085</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1608549557085</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="1601" y="504" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1608656223565">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1601" y="504" key="#com.intellij.fileTypes.FileTypeChooser/0.0.2560.1400@0.0.2560.1400" timestamp="1608656223565" />
+    <state x="1609" y="418" key="#com.intellij.ide.util.MemberChooser" timestamp="1608559452485">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1609" y="418" key="#com.intellij.ide.util.MemberChooser/0.0.2560.1400@0.0.2560.1400" timestamp="1608559452485" />
+    <state x="1420" y="347" key="SettingsEditor" timestamp="1608550334220">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1420" y="347" key="SettingsEditor/0.0.2560.1400@0.0.2560.1400" timestamp="1608550334220" />
+    <state x="1576" y="334" key="run.anything.popup" timestamp="1608654136981">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1576" y="334" key="run.anything.popup/0.0.2560.1400@0.0.2560.1400" timestamp="1608654136981" />
+    <state x="1513" y="320" key="search.everywhere.popup" timestamp="1608655895597">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1513" y="320" key="search.everywhere.popup/0.0.2560.1400@0.0.2560.1400" timestamp="1608655895597" />
+  </component>
+</project>
