@@ -4,11 +4,23 @@
     <cargoProject FILE="$PROJECT_DIR$/Cargo.toml" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="91b16f52-230e-4d08-9e70-2798ad8fc774" name="Default Changelist" comment="" />
+    <list default="true" id="91b16f52-230e-4d08-9e70-2798ad8fc774" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/map.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/map.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/player.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/player.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tile.rs" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -17,19 +29,48 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="MacroExpansionManager">
     <option name="directoryName" value="3kxgpo0o" />
   </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="1" />
+  </component>
   <component name="ProjectId" id="1lxrPLu9hSVu1IbOKikprqluWoz" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="org.rust.cargo.project.model.PROJECT_DISCOVERY" value="true" />
     <property name="settings.editor.selected.configurable" value="language.rust.cargo" />
+  </component>
+  <component name="RunManager">
+    <configuration name="Test rect::test" type="CargoCommandRunConfiguration" factoryName="Cargo Command" temporary="true">
+      <option name="channel" value="DEFAULT" />
+      <option name="command" value="test --package rogue-rust --bin rogue-rust rect::test" />
+      <option name="allFeatures" value="false" />
+      <option name="emulateTerminal" value="false" />
+      <option name="backtrace" value="SHORT" />
+      <option name="workingDirectory" value="file://$PROJECT_DIR$" />
+      <envs />
+      <method v="2">
+        <option name="CARGO.BUILD_TASK_PROVIDER" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Cargo.Test rect::test" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="RustProjectSettings">
     <option name="runExternalLinterOnTheFly" value="true" />
@@ -56,9 +97,30 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1609" y="418" key="#com.intellij.ide.util.MemberChooser/0.0.2560.1400@0.0.2560.1400" timestamp="1608559452485" />
-    <state x="1420" y="347" key="SettingsEditor" timestamp="1608550334220">
-      <screen x="0" y="0" width="2560" height="1400" />
+    <state width="1638" height="295" key="GridCell.Tab.0.bottom" timestamp="1609103662895">
+      <screen x="0" y="23" width="1680" height="1027" />
     </state>
+    <state width="1638" height="295" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1609098451334" />
+    <state width="1638" height="295" key="GridCell.Tab.0.bottom/0.23.1680.1027@0.23.1680.1027" timestamp="1609103662895" />
+    <state width="1638" height="295" key="GridCell.Tab.0.center" timestamp="1609103662885">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state width="1638" height="295" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1609098451333" />
+    <state width="1638" height="295" key="GridCell.Tab.0.center/0.23.1680.1027@0.23.1680.1027" timestamp="1609103662885" />
+    <state width="1638" height="295" key="GridCell.Tab.0.left" timestamp="1609103662862">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state width="1638" height="295" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1609098451332" />
+    <state width="1638" height="295" key="GridCell.Tab.0.left/0.23.1680.1027@0.23.1680.1027" timestamp="1609103662859" />
+    <state width="1638" height="295" key="GridCell.Tab.0.right" timestamp="1609103662888">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state width="1638" height="295" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1609098451334" />
+    <state width="1638" height="295" key="GridCell.Tab.0.right/0.23.1680.1027@0.23.1680.1027" timestamp="1609103662888" />
+    <state x="711" y="260" key="SettingsEditor" timestamp="1609156840032">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="711" y="260" key="SettingsEditor/0.0.1680.1050@0.0.1680.1050" timestamp="1609156840032" />
     <state x="1420" y="347" key="SettingsEditor/0.0.2560.1400@0.0.2560.1400" timestamp="1608550334220" />
     <state x="1576" y="334" key="run.anything.popup" timestamp="1608654136981">
       <screen x="0" y="0" width="2560" height="1400" />

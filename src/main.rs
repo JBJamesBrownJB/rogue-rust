@@ -1,17 +1,17 @@
 mod map;
-mod tile;
 mod player;
 mod components;
+mod rect;
+
 use rltk::*;
 use specs::prelude::*;
 use std::cmp::{max, min};
 use std::borrow::{Borrow};
 use map::*;
-use tile::*;
 use player::*;
 use components::*;
 
-struct State {
+pub struct State {
     ecs: World
 }
 
@@ -26,8 +26,8 @@ impl GameState for State {
         let positions = self.ecs.read_storage::<Position>();
         let renderables = self.ecs.read_storage::<Renderable>();
 
-        let mut map = self.ecs.fetch::<Vec<TileType>>();
-        draw_map(&mut map, ctx);
+        let mut map = self.ecs.fetch::<Map>();
+        map.draw_map(ctx);
 
         for (pos, render) in (&positions, &renderables).join() {
             ctx.set(pos.x, pos.y, render.fg, render.bg, render.glyph);
@@ -46,7 +46,9 @@ fn main() -> rltk::BError {
         ecs: World::new()
     };
 
-    gs.ecs.insert(new_map());
+    let map = Map::new_map_rooms_corridors();
+    let (player_x, player_y) = map.rooms[0].center();
+    gs.ecs.insert(map);
 
     gs.ecs.register::<Position>();
     gs.ecs.register::<Renderable>();
@@ -54,7 +56,7 @@ fn main() -> rltk::BError {
 
     gs.ecs
         .create_entity()
-        .with(Position { x: 40, y: 25 })
+        .with(Position { x: player_x, y: player_y })
         .with(Player {})
         .with(Renderable {
             glyph: rltk::to_cp437('@'),
