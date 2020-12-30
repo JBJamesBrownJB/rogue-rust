@@ -13,10 +13,11 @@ pub enum TileType {
 }
 
 pub struct Map {
-    pub(crate) tiles: Vec<TileType>,
-    pub(crate) rooms: Vec<Rect>,
-    pub(crate) width: i32,
-    pub(crate) height: i32,
+    pub tiles: Vec<TileType>,
+    pub rooms: Vec<Rect>,
+    pub width: i32,
+    pub height: i32,
+    pub revealed_tiles: Vec<bool>,
 }
 
 impl Algorithm2D for Map {
@@ -38,6 +39,7 @@ impl Map {
             rooms: vec![],
             width: 80,
             height: 50,
+            revealed_tiles: vec![false; 80 * 50],
         };
 
         const MAX_ROOMS: i32 = 30;
@@ -109,29 +111,24 @@ impl Map {
         (y as usize * 80) + x as usize
     }
 
-    pub fn draw_map(&self, ecs: &World, ctx: &mut Rltk) {
-        let viewsheds = ecs.write_storage::<Viewshed>();
-        let players = ecs.write_storage::<Player>();
-
-        for (_, viewshed) in (&players, &viewsheds).join() {
-            let mut x = 0;
-            let mut y = 0;
-            for tile in &self.tiles {
-                if viewshed.visible_tiles.contains(&Point { x, y }) {
-                    match tile {
-                        TileType::Wall => {
-                            ctx.set(x, y, SANDY_BROWN, ROSY_BROWN, rltk::to_cp437('#'));
-                        }
-                        TileType::Floor => {
-                            ctx.set(x, y, FOREST_GREEN, DARK_GREEN, rltk::to_cp437('░'));
-                        }
+    pub fn draw_map(&self, ctx: &mut Rltk) {
+        let mut x = 0;
+        let mut y = 0;
+        for tile in &self.tiles {
+            if self.revealed_tiles[self.xy_idx(x, y)] {
+                match tile {
+                    TileType::Wall => {
+                        ctx.set(x, y, SANDY_BROWN, ROSY_BROWN, rltk::to_cp437('#'));
+                    }
+                    TileType::Floor => {
+                        ctx.set(x, y, FOREST_GREEN, DARK_GREEN, rltk::to_cp437('░'));
                     }
                 }
-                x += 1;
-                if x > 79 {
-                    y += 1;
-                    x = 0;
-                }
+            }
+            x += 1;
+            if x > 79 {
+                y += 1;
+                x = 0;
             }
         }
     }

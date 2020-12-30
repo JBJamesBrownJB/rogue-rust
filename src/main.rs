@@ -29,7 +29,7 @@ impl GameState for State {
         let renderables = self.ecs.read_storage::<Renderable>();
 
         let mut map = self.ecs.fetch::<Map>();
-        map.draw_map(&self.ecs, ctx);
+        map.draw_map(ctx);
 
         for (pos, render) in (&positions, &renderables).join() {
             ctx.set(pos.x, pos.y, render.fg, render.bg, render.glyph);
