@@ -1,7 +1,10 @@
 use crate::rect::Rect;
-use rltk::{Rltk, SANDY_BROWN, ROSY_BROWN, FOREST_GREEN, DARK_GREEN, RandomNumberGenerator};
+use rltk::{Rltk, SANDY_BROWN, ROSY_BROWN, FOREST_GREEN, DARK_GREEN, RandomNumberGenerator, Algorithm2D, Point, BaseMap};
 use std::cmp::{min, max};
 use crate::map::TileType::Floor;
+use specs::{World, WorldExt, Join};
+use crate::components::Viewshed;
+use crate::player::Player;
 
 #[derive(PartialEq, Copy, Clone)]
 pub enum TileType {
@@ -12,8 +15,20 @@ pub enum TileType {
 pub struct Map {
     pub(crate) tiles: Vec<TileType>,
     pub(crate) rooms: Vec<Rect>,
-    width: i32,
-    height: i32,
+    pub(crate) width: i32,
+    pub(crate) height: i32,
+}
+
+impl Algorithm2D for Map {
+    fn dimensions(&self) -> Point {
+        Point::new(self.width, self.height)
+    }
+}
+
+impl BaseMap for Map {
+    fn is_opaque(&self, idx: usize) -> bool {
+        self.tiles[idx as usize] == TileType::Wall
+    }
 }
 
 impl Map {
@@ -94,24 +109,29 @@ impl Map {
         (y as usize * 80) + x as usize
     }
 
-    pub fn draw_map(&self, ctx: &mut Rltk) {
-        let mut x = 0;
-        let mut y = 0;
+    pub fn draw_map(&self, ecs: &World, ctx: &mut Rltk) {
+        let viewsheds = ecs.write_storage::<Viewshed>();
+        let players = ecs.write_storage::<Player>();
 
-        for tile in &self.tiles {
-            match tile {
-                TileType::Wall => {
-                    ctx.set(x, y, SANDY_BROWN, ROSY_BROWN, rltk::to_cp437('#'));
+        for (_, viewshed) in (&players, &viewsheds).join() {
+            let mut x = 0;
+            let mut y = 0;
+            for tile in &self.tiles {
+                if viewshed.visible_tiles.contains(&Point { x, y }) {
+                    match tile {
+                        TileType::Wall => {
+                            ctx.set(x, y, SANDY_BROWN, ROSY_BROWN, rltk::to_cp437('#'));
+                        }
+                        TileType::Floor => {
+                            ctx.set(x, y, FOREST_GREEN, DARK_GREEN, rltk::to_cp437('░'));
+                        }
+                    }
                 }
-                TileType::Floor => {
-                    ctx.set(x, y, FOREST_GREEN, DARK_GREEN, rltk::to_cp437('░'));
+                x += 1;
+                if x > 79 {
+                    y += 1;
+                    x = 0;
                 }
-            }
-
-            x += 1;
-            if x > 79 {
-                y += 1;
-                x = 0;
             }
         }
     }

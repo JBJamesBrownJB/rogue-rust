@@ -2,6 +2,7 @@ mod map;
 mod player;
 mod components;
 mod rect;
+mod visibility_system;
 
 use rltk::*;
 use specs::prelude::*;
@@ -10,6 +11,7 @@ use std::borrow::{Borrow};
 use map::*;
 use player::*;
 use components::*;
+use crate::visibility_system::VisibilitySystem;
 
 pub struct State {
     ecs: World
@@ -27,7 +29,7 @@ impl GameState for State {
         let renderables = self.ecs.read_storage::<Renderable>();
 
         let mut map = self.ecs.fetch::<Map>();
-        map.draw_map(ctx);
+        map.draw_map(&self.ecs, ctx);
 
         for (pos, render) in (&positions, &renderables).join() {
             ctx.set(pos.x, pos.y, render.fg, render.bg, render.glyph);
@@ -37,6 +39,8 @@ impl GameState for State {
 
 impl State {
     fn run_systems(&mut self) {
+        let mut vis_sys = VisibilitySystem{};
+        vis_sys.run_now(&self.ecs);
         self.ecs.maintain();
     }
 }
@@ -53,6 +57,7 @@ fn main() -> rltk::BError {
     gs.ecs.register::<Position>();
     gs.ecs.register::<Renderable>();
     gs.ecs.register::<Player>();
+    gs.ecs.register::<Viewshed>();
 
     gs.ecs
         .create_entity()
@@ -63,7 +68,12 @@ fn main() -> rltk::BError {
             fg: RGB::named(rltk::YELLOW),
             bg: RGB::named(rltk::BLACK),
         })
+        .with(Viewshed {
+            visible_tiles: Vec::new(),
+            range: 8,
+        })
         .build();
+
 
     let context = RltkBuilder::simple80x50()
         .with_title("Roguelike Tutorial")

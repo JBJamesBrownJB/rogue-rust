@@ -5,14 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="91b16f52-230e-4d08-9e70-2798ad8fc774" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/components.rs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.rs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/map.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/map.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/player.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/player.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tile.rs" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,9 +89,10 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1601" y="504" key="#com.intellij.fileTypes.FileTypeChooser/0.0.2560.1400@0.0.2560.1400" timestamp="1608656223565" />
-    <state x="1609" y="418" key="#com.intellij.ide.util.MemberChooser" timestamp="1608559452485">
-      <screen x="0" y="0" width="2560" height="1400" />
+    <state x="1056" y="314" key="#com.intellij.ide.util.MemberChooser" timestamp="1609187238018">
+      <screen x="0" y="0" width="1680" height="1050" />
     </state>
+    <state x="1056" y="314" key="#com.intellij.ide.util.MemberChooser/0.0.1680.1050@0.0.1680.1050" timestamp="1609187238018" />
     <state x="1609" y="418" key="#com.intellij.ide.util.MemberChooser/0.0.2560.1400@0.0.2560.1400" timestamp="1608559452485" />
     <state width="1638" height="295" key="GridCell.Tab.0.bottom" timestamp="1609103662895">
       <screen x="0" y="23" width="1680" height="1027" />
@@ -126,9 +123,10 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1576" y="334" key="run.anything.popup/0.0.2560.1400@0.0.2560.1400" timestamp="1608654136981" />
-    <state x="1513" y="320" key="search.everywhere.popup" timestamp="1608655895597">
-      <screen x="0" y="0" width="2560" height="1400" />
+    <state x="993" y="240" width="672" height="678" key="search.everywhere.popup" timestamp="1609187286773">
+      <screen x="0" y="0" width="1680" height="1050" />
     </state>
+    <state x="993" y="240" width="672" height="678" key="search.everywhere.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1609187286773" />
     <state x="1513" y="320" key="search.everywhere.popup/0.0.2560.1400@0.0.2560.1400" timestamp="1608655895597" />
   </component>
 </project>
